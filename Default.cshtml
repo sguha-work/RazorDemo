@@ -141,13 +141,6 @@
 
         FusionCharts.Charts.Chart sales = new FusionCharts.Charts.Chart("msline", "div_fc", "600", "350", "json", jsonData.ToString());
         // Render the chart
-        //div_fc.Text = 
-        
-        
-        
-
+        @Html.Raw(sales.Render()); 
 }
- @Html.Raw(sales.Render());
-<div style="text-align:center">
-        <div id=""></div>           
-    </div>
+
