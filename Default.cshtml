@@ -2,11 +2,12 @@
     Layout = "~/_SiteLayout.cshtml";
     Page.Title = "Welcome to my Web Site!";
 }
+
 <p>
     ASP.NET Web Pages make it easy to build powerful .NET based applications for the web.
 </p>
 <!-- FusionCharts script tag -->
-    <script type="text/javascript" src="../fusioncharts/fusioncharts.js"></script>
+    
 
 
 @using System.Collections;
@@ -141,9 +142,12 @@
         FusionCharts.Charts.Chart sales = new FusionCharts.Charts.Chart("msline", "div_fc", "600", "350", "json", jsonData.ToString());
         // Render the chart
         //div_fc.Text = 
+        
+        
+        
 
 }
-
+ @Html.Raw(sales.Render());
 <div style="text-align:center">
-        <div id="div_fc">@sales.Render();</div>           
+        <div id=""></div>           
     </div>
